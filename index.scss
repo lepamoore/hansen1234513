@@ -24,7 +24,7 @@ $secondary-color: #f7f7f1;
 }
 
 #heading {
-    font-size: 48px;
+    font-size: 32px; //48px
     font-weight: 700;
     text-align: center;
     color: $secondary-color;
@@ -39,7 +39,7 @@ a {
 }
 
 .button {
-    font-size: 32px;
+    font-size: 16px; //32px
     line-height: 10px;
     text-align: center;
     padding: 32px;
@@ -75,4 +75,14 @@ a {
     text-decoration: underline;
     color: $secondary-color;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 767px) {
+    .button {
+        font-size: 32px;
+    }
+
+    #heading {
+        font-size: 48px;
+    }
 }
