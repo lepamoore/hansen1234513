@@ -1,0 +1,78 @@
+$main-color: #1f6170;
+$secondary-color: #f7f7f1;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "helvetica neue";
+}
+
+#main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 0 16px 0;
+    background: $main-color url(./assets/choice-bg-img-2.svg) no-repeat center center;
+    background-size: cover;
+}
+
+#heading {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: $secondary-color;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -4%;
+    line-height: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: none;
+}
+
+.button {
+    font-size: 32px;
+    line-height: 10px;
+    text-align: center;
+    padding: 32px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $secondary-color;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-out;
+}
+
+#cleaning-button {
+    margin-bottom: 90px;
+    background-color: #26858650;
+    border: 1px solid #268586;
+    &:hover {
+        cursor: pointer;
+        background-color: #26858695;
+    }
+}
+
+#garden-button {
+    background-color: #3c7f4550;
+    border: 1px solid #3c7f45;
+    &:hover {
+        cursor: pointer;
+        background-color: #3c7f4595;
+    }
+}
+
+#imprint-link {
+    text-decoration: underline;
+    color: $secondary-color;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
