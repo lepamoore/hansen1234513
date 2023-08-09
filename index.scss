@@ -8,81 +8,101 @@ $secondary-color: #f7f7f1;
     font-family: "helvetica neue";
 }
 
+html {
+    height: 100%;
+    background-color: $secondary-color;
+}
+
+body {
+    height: 100%;
+}
+
+h1 {
+    display: none;
+}
+
 #main {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 48px 0 16px 0;
-    background: $main-color url(./assets/choice-bg-img-2.svg) no-repeat center center;
-    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
 
-#heading {
-    font-size: 32px; //48px
-    font-weight: 700;
-    text-align: center;
-    color: $secondary-color;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    letter-spacing: -4%;
-    line-height: 50px;
-}
-
-a {
-    text-decoration: none;
-    color: none;
-}
-
-.button {
-    font-size: 16px; //32px
-    line-height: 10px;
-    text-align: center;
-    padding: 32px;
+.img-container {
     display: block;
+    height: 50vh;
+    overflow: hidden;
     position: relative;
+    &:hover .img {
+        scale: 1.05;
+    }
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     color: $secondary-color;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease-out;
+    font-size: 2rem;
+    text-shadow: 5px 5px 15px black;
 }
 
-#cleaning-button {
-    margin-bottom: 90px;
-    background-color: #26858650;
-    border: 1px solid #268586;
-    &:hover {
-        cursor: pointer;
-        background-color: #26858695;
-    }
+.img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transition: scale ease-out 0.3s;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#garden-button {
-    background-color: #3c7f4550;
-    border: 1px solid #3c7f45;
-    &:hover {
-        cursor: pointer;
-        background-color: #3c7f4595;
-    }
+#img-reinigung {
+    background-image: url(./assets/josue-michel-FhsFUo-Wfc0-unsplash.webp);
+}
+
+#img-garten {
+    background-image: url(./assets/crystal-jo-PKcTuA_CRAo-unsplash.webp);
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 1rem;
+    background-color: $secondary-color;
 }
 
 #imprint-link {
-    text-decoration: underline;
-    color: $secondary-color;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 1rem;
+    color: $main-color;
 }
 
-@media screen and (min-width: 767px) {
-    .button {
-        font-size: 32px;
+@media screen and (min-width: 1024px) {
+    .img-container {
+        width: 50%;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        background-color: $main-color;
+        position: relative;
+        cursor: pointer;
     }
 
-    #heading {
-        font-size: 48px;
+    .img {
+        height: 100%;
+        width: auto;
+    }
+
+    h2 {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        color: $secondary-color;
+        font-size: 3rem;
+        text-shadow: 10px 10px 20px #000;
+        font-family: "Roboto" Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+        transition: opacity ease-out 0.3s;
     }
 }
